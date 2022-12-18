@@ -115,13 +115,13 @@ html {
     flex-direction: column;
     align-items: flex-end;
 
-    right: calc(100% - 4rem);
+    right: calc(100% - 6rem);
 
     transform-origin: 0 0;
     transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
 }
 .left .logo-simplon {
-    width: 40px;
+    width: 58px;
 }
 .extend-cv {
     background: var(--primary);
@@ -142,8 +142,40 @@ html {
 
     z-index: 1;
 
-    left: -5rem;
+    left: -4rem;
 }
+.contact {
+    margin: 2rem 0;
+}
+.contact ul {
+    list-style-type: none;
+    flex-direction: column;
+    gap: 1rem;
+}
+.contact ul li {
+    display: flex;
+    align-items: center;
+
+    background: #FFF;
+    border-radius: 50px;
+    box-shadow: 2px 3px 0 rgba(215, 215, 215, 0.4);
+    width: 58px;
+    height: 40px;
+    overflow: hidden;
+
+    transition: width 1s cubic-bezier(0.77,0.2,0.05,1.0);
+}
+.contact ul li p {
+    padding: 0 1.5rem;
+
+    color: var(--primary);
+    font-weight: 700;
+    font-size: 0.8rem;
+}
+.menu-mobile-contact {
+    width: 90vw !important; ;
+}
+
 
 .right {
     background: #FFF;
@@ -157,25 +189,44 @@ html {
 }
 
 .mobile-menu {
-    transform: translate(calc(100% - 4rem), 0);
+    transform: translate(calc(100% - 6rem), 0);
 }
 
 @media screen and (min-width: 500px){
     .left {
-        right: calc(100% - 6rem);
+        right: calc(100% - 8rem);
     }
     .left .logo-simplon {
-        width: 58px;
+        width: 5rem;
     }
+    .contact ul li {
+        width: 5rem;
+        height: 58px;
+        overflow: hidden;
+    }
+    .contact ul li img {
+        height: 58px;
+    }
+    .contact ul li p {
+        padding: 0 2.5rem;
+
+        color: var(--primary);
+        font-weight: 700;
+        font-size: 1rem;
+    }
+    .menu-mobile-contact {
+        width: calc(477px - 2rem) !important; ;
+    }
+
     .right {
-        width: calc(100% - 6rem);
-        left: 6rem
+        width: calc(100% - 8rem);
+        left: 8rem
     }
     .extend-cv {
         left: -2rem;
     }
     .mobile-menu {
-        transform: translate(calc(100% - 6rem), 0);
+        transform: translate(calc(100% - 8rem), 0);
     }
 }
 
@@ -189,5 +240,20 @@ html {
     }
     .extend-cv {
         display: none;
+    }
+
+    .contact ul {
+        gap: 0.5rem;
+    }
+    .contact ul li {
+        width: calc(477px - 2rem);
+        height: 40px;
+    }
+    .contact ul li img {
+        height: 40px;
+    }
+    .contact ul li p {
+        padding: 0 1.5rem;
+        font-size: 1rem;
     }
 }
