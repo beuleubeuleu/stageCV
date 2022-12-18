@@ -37,6 +37,9 @@ html {
 .flex {
     display: flex;
 }
+.grid {
+    display: grid;
+}
 .absolute {
     position: absolute;
 }
@@ -44,7 +47,7 @@ html {
 .cover {
     background: #a32225 ;
     height: 100vh ;
-    width: 90vw;
+    width: 92vw;
     margin-right: 8vw;
 
     padding: 4rem 2rem 4rem 8vw;
@@ -106,7 +109,7 @@ html {
     width: min(477px, 100%);
     height: 100vh;
     background: #F1F5F8;
-    border-radius: 15px;
+    border-radius: 0 15px 15px 0;
     box-shadow: 5px 0 10px rgba(0,0,0,0.25);
     padding: 1rem;
 
@@ -114,6 +117,7 @@ html {
 
     flex-direction: column;
     align-items: flex-end;
+    overflow-y: scroll;
 
     right: calc(100% - 6rem);
 
@@ -144,6 +148,10 @@ html {
 
     left: -4rem;
 }
+.mobile-menu {
+    transform: translate(calc(100% - 6rem), 0);
+}
+
 .contact {
     margin: 2rem 0;
 }
@@ -176,21 +184,34 @@ html {
     width: 90vw !important; ;
 }
 
+.tech-stack {
+    width: 100%;
+
+    text-align: left;
+    color: var(--primary);
+}
+.tech-icons {
+    margin: 1rem 0;
+
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+.tech-icons img {
+    width: 58px;
+}
 
 .right {
     background: #FFF;
     width: calc(100% - 4rem);
     height: 100vh;
-    border-radius: 15px;
+    border-radius: 15px 0 0 15px;
 
     z-index: 0;
 
     left:  4rem;
 }
 
-.mobile-menu {
-    transform: translate(calc(100% - 6rem), 0);
-}
 
 @media screen and (min-width: 500px){
     .left {
@@ -198,6 +219,10 @@ html {
     }
     .left .logo-simplon {
         width: 5rem;
+    }
+
+    .mobile-menu {
+        transform: translate(calc(100% - 8rem), 0);
     }
     .contact ul li {
         width: 5rem;
@@ -218,15 +243,22 @@ html {
         width: calc(477px - 2rem) !important; ;
     }
 
+    .tech-stack {
+        font-size: 1.5rem;
+    }
+    .tech-icons {
+        margin: 2rem 0;
+    }
+    .tech-icons img {
+        width: 5rem;
+    }
+
     .right {
-        width: calc(100% - 8rem);
-        left: 8rem
+        width: calc(100% - 6rem);
+        left: 6rem
     }
     .extend-cv {
         left: -2rem;
-    }
-    .mobile-menu {
-        transform: translate(calc(100% - 8rem), 0);
     }
 }
 
@@ -236,7 +268,8 @@ html {
     }
     .right {
         width: min(747px, 100%);
-        position: initial;
+        position: relative;
+        left: -1.5rem
     }
     .extend-cv {
         display: none;
@@ -254,6 +287,6 @@ html {
     }
     .contact ul li p {
         padding: 0 1.5rem;
-        font-size: 1rem;
+        font-size: 0.9rem;
     }
 }
