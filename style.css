@@ -24,3 +24,71 @@ p, h1, h2, h3, h4, h5, h6 {
 #root, #__next {
     isolation: isolate;
 }
+
+:root {
+    --primary: rgb(207,48,52);
+    --secondary: rgb(51,51,51)
+}
+
+html {
+    background: var(--secondary);
+    font-family: sans-serif;
+}
+.flex {
+    display: flex;
+}
+
+.cover {
+    background: rgba(207,48,52, 0.8);
+    height: 100vh ;
+    width: 90vw;
+    margin-right: 8vw;
+
+    padding: 4rem 2rem 4rem 8vw;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+    box-shadow: 0 0 50px #333333;
+    
+    transform: none;
+}
+.cover .titre {
+    color: rgb(241,245,248);
+    text-shadow: 10px 10px 20px rgba(30, 30, 30, 0.5);
+
+}
+.cover .gros-titre {
+    font-size: 8vw;
+    font-weight: 500;
+}
+.cover .sous-titre {
+    opacity: 0.85;
+    font-size: 3.5vw;
+}
+.cover .fantome {
+    text-shadow: none;
+}
+.fantome p {
+    color: transparent;
+}
+.fuck-cover-btn {
+    align-self: flex-end;
+
+    background: transparent;
+    border: 1px solid #F1F5F8;
+    color: rgba(241,245,248, 0.85);
+    padding: 0 0.5rem;
+    font-style: italic;
+    font-size: clamp(1rem, 2vw, 2vw);
+    cursor: pointer;
+}
+.fuck-cover-btn:hover {
+    box-shadow: -4px 4px 10px #AAAAAA;
+    text-shadow: 1px 1px 1px #AAAAAA;
+}
+.fuck-cover {
+    transform: translate(-100%, 0);
+    transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
+    transform-origin: 0 0;
+}
+
